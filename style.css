@@ -990,6 +990,7 @@ object {
 --------------------------------------------------------------*/
 .site {
 	overflow: hidden;
+	border-top: 6px solid rgb(4, 4, 2);
 }
 
 .site-content {
@@ -1044,12 +1045,12 @@ object {
 	line-height: 0;
 }
 
-.susty {
-	width: 30px;
-	height: 30px;
+.logo svg {
+	width: 40px;
+	height: 40px;
 }
 
-svg.susty * {
+.logo svg * {
 	width: 100%;
 	height: 100%;
 	/*fill: white;*/
