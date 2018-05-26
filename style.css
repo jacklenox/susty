@@ -397,7 +397,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "Nimbus Sans L", "Liberation Sans", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;;
+	font-family: "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "Nimbus Sans L", "Liberation Sans", Tahoma, Geneva, sans-serif;;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
