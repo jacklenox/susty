@@ -617,15 +617,18 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: rgb(4, 4, 2);
+	text-decoration: none;
+	border-bottom: 2px dashed rgb(4, 4, 2);
 }
 
 a:visited {
-	color: purple;
+	color: rgb(4, 4, 2);
 }
 
 a:hover, a:focus, a:active {
-	color: midnightblue;
+	/*color: midnightblue;*/
+	border-bottom-style: solid;
 }
 
 a:focus {
@@ -687,7 +690,6 @@ a:hover, a:active {
 
 .main-navigation a {
 	display: block;
-	text-decoration: none;
 }
 
 /* Small menu. */
@@ -1020,12 +1022,12 @@ object {
 
 .site-header h1 a {
 	/*color: white;*/
-	text-decoration: none;
+	/*text-decoration: none;*/
 }
 
 .site-header p.site-title a {
 	/*color: white;*/
-	text-decoration: none;
+	/*text-decoration: none;*/
 }
 
 .site-header p.site-description {
@@ -1043,6 +1045,10 @@ object {
 	flex: 0 0 60px;
 	text-align: center;
 	line-height: 0;
+}
+
+.logo a {
+	border-bottom: unset;
 }
 
 .logo svg {
@@ -1066,7 +1072,7 @@ object {
 
 .site-title a {
 	color: rgb(4, 4, 2);
-	text-decoration: none;
+	border-bottom: unset;
 }
 
 .site-description {
@@ -1096,4 +1102,12 @@ object {
 .entry-title a {
 	color: rgb(4, 4, 2);
 	text-decoration: none;
+}
+
+.entry-meta {
+	color: rgb(179, 179, 179);
+}
+
+.entry-meta a {
+	color: rgb(179, 179, 179);
 }
