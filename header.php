@@ -26,8 +26,19 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
+			<div class="logo">
+				<?php
+				if ( has_custom_logo() ) :
+					the_custom_logo();
+				else :
+					?>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo file_get_contents( get_stylesheet_directory() . '/images/susty.svg' ); ?></a>
+					<?php
+				endif;
+				?>
+			</div>
+
 			<?php
-			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>

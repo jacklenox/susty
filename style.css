@@ -40,6 +40,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
+# Site
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -396,7 +397,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: 'Palatino Linotype', Palatino, Palladio, 'URW Palladio L', 'Book Antiqua', Baskerville, 'Bookman Old Style', 'Bitstream Charter', 'Nimbus Roman No9 L', Garamond, 'Apple Garamond', 'ITC Garamond Narrow', 'New Century Schoolbook', 'Century Schoolbook', 'Century Schoolbook L', Likhan, Norasi, Rekha, Georgia, 'DejaVu LGC Serif', 'DejaVu Serif', serif;
+	font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "Nimbus Sans L", "Liberation Sans", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -469,8 +470,10 @@ html {
 }
 
 body {
-	background: #fff;
+	background: #fffefc;
+	color: rgb(4, 4, 2);
 	/* Fallback for when there is no custom background color defined. */
+	overflow-x: hidden;
 }
 
 hr {
@@ -679,7 +682,6 @@ a:hover, a:active {
 }
 
 .main-navigation li {
-	float: left;
 	position: relative;
 }
 
@@ -981,4 +983,116 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+## Site
+--------------------------------------------------------------*/
+.site {
+	overflow: hidden;
+}
+
+.site-content {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+/*.site-header::after {*/
+	/*width: 200%;*/
+	/*height: 100%;*/
+	/*position: absolute;*/
+	/*z-index: -1;*/
+	/*top: -50%;*/
+	/*left: -50%;*/
+	/*background-color: #0A3740;*/
+	/*transform: rotate(357deg);*/
+/*}*/
+
+.site-header {
+	display: flex;
+	align-items: center;
+	padding: 1rem 0;
+	flex-wrap: wrap;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.site-header h1 a {
+	/*color: white;*/
+	text-decoration: none;
+}
+
+.site-header p.site-title a {
+	/*color: white;*/
+	text-decoration: none;
+}
+
+.site-header p.site-description {
+	/*color: white;*/
+}
+
+.site-branding {
+	display: flex;
+	align-items: center;
+	flex: 0 1 100%;
+	margin: 1rem 0;
+}
+
+.logo {
+	flex: 0 0 60px;
+	text-align: center;
+	line-height: 0;
+}
+
+.susty {
+	width: 30px;
+	height: 30px;
+}
+
+svg.susty * {
+	width: 100%;
+	height: 100%;
+	/*fill: white;*/
+}
+
+.site-title {
+	font-size: 1rem;
+	line-height: 1rem;
+	font-weight: bold;
+	flex: 1;
+	margin: 0;
+}
+
+.site-title a {
+	color: rgb(4, 4, 2);
+	text-decoration: none;
+}
+
+.site-description {
+	font-size: 1rem;
+	line-height: 1rem;
+	font-weight: normal;
+	flex: 0 0 calc(300px + 2rem);
+	text-align: right;
+	margin: 0;
+}
+
+.nav-menu {
+	display: flex !important;
+	justify-content: flex-end;
+}
+
+.menu-item {
+	margin: .5rem 0 .5rem .5rem;
+}
+
+.entry-title {
+	font-size: 3rem;
+	line-height: 3rem;
+	margin: 0 0 1rem 0;
+}
+
+.entry-title a {
+	color: rgb(4, 4, 2);
+	text-decoration: none;
 }
