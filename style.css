@@ -1,23 +1,22 @@
 /*!
-Theme Name: Susty WP
-Theme URI: http://underscores.me/
+Theme Name: Susty
+Theme URI: https://sustywp.com
 Author: Jack Lenox
-Author URI: http://jacklenox.com
-Description: Description
+Author URI: https://blog.jacklenox.com
+Description: A theme for WordPress focused on performance and sustainability.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: susty-wp
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Text Domain: susty
+Tags:
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Susty WP is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Susty is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+Normalizing styles have been helped along thanks to the fine work of Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -72,7 +71,7 @@ body {
 }
 
 /**
- * Correct the font size and margin on `h1` elements within `section` and
+ * Correct the font size and margin on `h1` elements with `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
@@ -458,6 +457,7 @@ big {
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
+
 html {
 	box-sizing: border-box;
 }
@@ -465,25 +465,18 @@ html {
 *,
 *:before,
 *:after {
-	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
 }
 
 body {
 	background-color: #fffefc;
-	/* Fallback for when there is no custom background color defined. */
-	overflow-x: hidden;
+	border-top: 0.4rem solid;
 }
 
 hr {
 	background-color: #ccc;
 	border: 0;
 	height: 1px;
-	margin-bottom: 1.5em;
-}
-
-ul, ol {
-	margin: 0 0 1.5em 3em;
 }
 
 ul {
@@ -510,14 +503,11 @@ dd {
 
 img {
 	height: auto;
-	/* Make sure images are scaled correctly. */
 	max-width: 100%;
-	/* Adhere to container width. */
 }
 
 figure {
 	margin: 1em 0;
-	/* Extra wide images within figure tags don't overflow the content area. */
 }
 
 table {
@@ -610,10 +600,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-## Links
+# Links
 --------------------------------------------------------------*/
 a {
 	color: rgb(4, 4, 2);
@@ -638,101 +625,6 @@ a:focus {
 
 a:hover, a:active {
 	outline: 0;
-}
-
-/*--------------------------------------------------------------
-## Menus
---------------------------------------------------------------*/
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-}
-
-.main-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-
-.main-navigation > div > ul {
-	display: flex;
-	justify-content: flex-end;
-}
-
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-
-.main-navigation li {
-	position: relative;
-}
-
-.main-navigation a {
-	display: block;
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
-}
-
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
 }
 
 /*--------------------------------------------------------------
@@ -831,18 +723,6 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-.widget {
-	margin: 0 0 1.5em;
-	/* Make sure select elements fit in widgets. */
-}
-
-.widget select {
-	max-width: 100%;
-}
-
-/*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -860,17 +740,6 @@ a:hover, a:active {
 	display: none;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
-
-.page-links {
-	clear: both;
-	margin: 0 0 1.5em;
-}
-
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -883,32 +752,8 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
-	/* Theme Footer (when set to scrolling) */
-	display: none;
-}
-
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
-.infinity-end.neverending .site-footer {
-	display: block;
-}
-
-/*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
-.page-content .wp-smiley,
-.entry-content .wp-smiley,
-.comment-content .wp-smiley {
-	border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
-}
-
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
@@ -994,42 +839,38 @@ object {
 }
 
 /*--------------------------------------------------------------
-## Site
+# Site
 --------------------------------------------------------------*/
-.site {
-	overflow: hidden;
-	border-top: 0.4rem solid rgb(4, 4, 2);
-}
-
-.site-content {
-	max-width: 800px;
-	margin: 0 auto;
-}
-
-.site-header {
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+header#masthead {
 	display: flex;
 	align-items: center;
-	padding: 1rem 0;
-	flex-wrap: wrap;
 	max-width: 1100px;
-	margin: 0 auto;
+	margin: 2rem auto;
 }
 
-.site-branding {
-	display: flex;
-	align-items: center;
-	flex: 0 1 100%;
-	margin: 1rem 0;
+header#masthead h1, header#masthead p {
+	font-size: 1rem;
+	line-height: 1rem;
+	font-weight: bold;
+	flex: 1;
+	margin: 0;
+}
+
+header#masthead > * > a {
+	border-bottom: unset;
+}
+
+header#masthead > a {
+	font-weight: bold;
 }
 
 .logo {
 	flex: 0 0 60px;
 	text-align: center;
 	line-height: 0;
-}
-
-.logo a {
-	border-bottom: unset;
 }
 
 .logo svg {
@@ -1042,46 +883,18 @@ object {
 	height: 100%;
 }
 
-.site-title {
-	font-size: 1rem;
-	line-height: 1rem;
-	font-weight: bold;
-	flex: 1;
-	margin: 0;
+/*--------------------------------------------------------------
+## Content
+--------------------------------------------------------------*/
+#content {
+	max-width: 800px;
+	margin: 0 auto;
 }
 
-.site-title a {
-	color: rgb(4, 4, 2);
-	border-bottom: unset;
-}
-
-.site-description {
-	font-size: 1rem;
-	line-height: 1rem;
-	font-weight: normal;
-	flex: 0 0 calc(300px + 2rem);
-	text-align: right;
-	margin: 0;
-}
-
-header > nav > div > ul {
-	/*display: flex;*/
-	/*justify-content: flex-end;*/
-}
-
-.menu-item {
-	margin: .5rem 0 .5rem .5rem;
-}
-
-.entry-title {
+article> header> h1, article > header > h2 {
 	font-size: 3rem;
 	line-height: 3rem;
 	margin: 0 0 1rem 0;
-}
-
-.entry-title a {
-	color: rgb(4, 4, 2);
-	text-decoration: none;
 }
 
 .entry-meta {
@@ -1090,4 +903,10 @@ header > nav > div > ul {
 
 .entry-meta a {
 	color: rgb(179, 179, 179);
+}
+
+footer#colophon {
+	max-width: 1100px;
+	margin: 0 auto;
+	text-align: center;
 }

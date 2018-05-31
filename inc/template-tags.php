@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Susty_WP
+ * @package Susty
  */
 
 if ( ! function_exists( 'susty_wp_posted_on' ) ) :
@@ -26,7 +26,7 @@ if ( ! function_exists( 'susty_wp_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'susty-wp' ),
+			esc_html_x( 'Posted on %s', 'post date', 'susty' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -42,7 +42,7 @@ if ( ! function_exists( 'susty_wp_posted_by' ) ) :
 	function susty_wp_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'susty-wp' ),
+			esc_html_x( 'by %s', 'post author', 'susty' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -59,17 +59,17 @@ if ( ! function_exists( 'susty_wp_entry_footer' ) ) :
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'susty-wp' ) );
+			$categories_list = get_the_category_list( esc_html__( ', ', 'susty' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'susty-wp' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'susty' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'susty-wp' ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'susty' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'susty-wp' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'susty' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 
@@ -79,7 +79,7 @@ if ( ! function_exists( 'susty_wp_entry_footer' ) ) :
 				sprintf(
 					wp_kses(
 						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'susty-wp' ),
+						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'susty' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -96,7 +96,7 @@ if ( ! function_exists( 'susty_wp_entry_footer' ) ) :
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'susty-wp' ),
+					__( 'Edit <span class="screen-reader-text">%s</span>', 'susty' ),
 					array(
 						'span' => array(
 							'class' => array(),

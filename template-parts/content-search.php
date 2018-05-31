@@ -4,13 +4,13 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Susty_WP
+ * @package Susty
  */
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<header>
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 		<?php if ( 'post' === get_post_type() ) : ?>
@@ -21,15 +21,15 @@
 			?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
-	</header><!-- .entry-header -->
+	</header>
 
 	<?php susty_wp_post_thumbnail(); ?>
 
-	<div class="entry-summary">
+	<div>
 		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+	</div>
 
 	<footer class="entry-footer">
 		<?php susty_wp_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</footer>
 </article><!-- #post-<?php the_ID(); ?> -->

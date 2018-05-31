@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package Susty_WP
+ * @package Susty
  */
 
 /**
@@ -28,7 +28,7 @@ function susty_wp_jetpack_setup() {
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
 		'post-details'    => array(
-			'stylesheet' => 'susty-wp-style',
+			'stylesheet' => 'susty-style',
 			'date'       => '.posted-on',
 			'categories' => '.cat-links',
 			'tags'       => '.tags-links',
