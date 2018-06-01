@@ -3,6 +3,7 @@ get_header();
 ?>
 
 		<nav id="site-navigation" class="main-navigation">
+			<h1>Menu</h1>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
