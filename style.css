@@ -895,7 +895,6 @@ header#masthead > a {
 
 article div a {
 	background: rgb(252, 248, 243) none repeat scroll 0% 0%;
-	padding: 0 .5em;
 }
 
 article > header > h1, article > header > h2 {
@@ -922,6 +921,7 @@ article > header > h1, article > header > h2 {
 }
 
 .cat-links a, .comments-link a, .edit-link a {
+	padding: 0 .5em;
 	margin: 0 .5em 0 0;
 }
 
