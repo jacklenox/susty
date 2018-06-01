@@ -892,8 +892,8 @@ header#masthead > a {
 }
 
 article> header> h1, article > header > h2 {
-	font-size: 3rem;
-	line-height: 3rem;
+	font-size: 2.4rem;
+	line-height: 2.4rem;
 	margin: 0 0 1rem 0;
 }
 
@@ -903,6 +903,21 @@ article> header> h1, article > header > h2 {
 
 .entry-meta a {
 	color: rgb(179, 179, 179);
+}
+
+.cat-links {
+	display: flex;
+	align-items: center;
+}
+
+.cat-links a:first-of-type {
+	margin-left: .5em;
+}
+
+.cat-links a, .comments-link a, .edit-link a {
+	background: rgb(252, 248, 243) none repeat scroll 0% 0%;
+	padding: 0 .5em;
+	margin: 0 .5em 0 0;
 }
 
 footer#colophon {
