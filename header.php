@@ -47,13 +47,14 @@
 		endif;
 
 		if ( get_query_var( 'menu' ) ) :
-			if ( 0 === strpos( filter_input( INPUT_SERVER, 'HTTP_REFERER', FILTER_SANITIZE_URL ), home_url() ) ) {
-				$prev_url = filter_input( INPUT_SERVER, 'HTTP_REFERER', FILTER_SANITIZE_URL );
-			} else {
-				$prev_url = home_url( '/' );
-			}
 			?>
-			<a href="<?php echo esc_url( $prev_url ); ?>" rel="home"><?php echo file_get_contents( get_stylesheet_directory() . '/images/noun_1746502.svg' ); ?></a>
+			<a id="susty-back-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo file_get_contents( get_stylesheet_directory() . '/images/noun_1746502.svg' ); ?></a>
+			<script>
+				var susty_home_url = '<?php echo esc_url( home_url( '/' ) ); ?>';
+				if ( 0 === document.referrer.indexOf( susty_home_url ) ) {
+					document.getElementById( 'susty-back-link' ).href = document.referrer;
+				}
+			</script>
 			<?php
 		else :
 			?>
