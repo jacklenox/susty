@@ -846,7 +846,7 @@ object {
 header#masthead {
 	display: flex;
 	align-items: center;
-	max-width: 1100px;
+	max-width: 69em;
 	margin: 2em auto;
 	padding: 0 1em;
 }
@@ -888,7 +888,7 @@ header#masthead > a {
 ## Content
 --------------------------------------------------------------*/
 #content {
-	max-width: 32em;
+	max-width: 33em;
 	margin: 0 auto;
 }
 
@@ -926,7 +926,7 @@ article > header > h1, article > header > h2 {
 }
 
 footer#colophon {
-	max-width: 1100px;
+	max-width: 69em;
 	margin: 0 auto;
 	text-align: center;
 	padding: 0 1em;
