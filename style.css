@@ -927,7 +927,7 @@ article > header > h1, article > header > h2 {
 
 footer#colophon {
 	max-width: 69em;
-	margin: 0 auto;
+	margin: 3em auto;
 	text-align: center;
 	padding: 0 1em;
 	font-size: .75em;
