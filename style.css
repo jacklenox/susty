@@ -893,7 +893,7 @@ header#masthead > a {
 	padding: 0 1em;
 }
 
-article div a {
+article a {
 	background: rgb(252, 248, 243) none repeat scroll 0% 0%;
 }
 
@@ -930,4 +930,5 @@ footer#colophon {
 	margin: 0 auto;
 	text-align: center;
 	padding: 0 1em;
+	font-size: .75em;
 }
