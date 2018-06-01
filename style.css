@@ -397,8 +397,7 @@ optgroup,
 textarea {
 	color: rgb(4, 4, 2);
 	font-family: "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "Nimbus Sans L", "Liberation Sans", Tahoma, Geneva, sans-serif;;
-	font-size: 16px;
-	font-size: 1rem;
+	font-size: calc( 14px + 8 * ((100vw - 500px) / 1500));
 	line-height: 1.5;
 }
 
@@ -848,12 +847,13 @@ header#masthead {
 	display: flex;
 	align-items: center;
 	max-width: 1100px;
-	margin: 2rem auto;
+	margin: 2em auto;
+	padding: 0 1em;
 }
 
 header#masthead h1, header#masthead p {
-	font-size: 1rem;
-	line-height: 1rem;
+	font-size: 1em;
+	line-height: 1em;
 	font-weight: bold;
 	flex: 1;
 	margin: 0;
@@ -868,14 +868,15 @@ header#masthead > a {
 }
 
 .logo {
-	flex: 0 0 60px;
+	flex: 0 0 2.4em;
 	text-align: center;
 	line-height: 0;
+	margin-right: .5em;
 }
 
 .logo svg {
-	width: 40px;
-	height: 40px;
+	width: 2.4em;
+	height: 2.4em;
 }
 
 .logo svg * {
@@ -887,14 +888,18 @@ header#masthead > a {
 ## Content
 --------------------------------------------------------------*/
 #content {
-	max-width: 800px;
+	max-width: 32em;
 	margin: 0 auto;
 }
 
-article> header> h1, article > header > h2 {
-	font-size: 2.4rem;
-	line-height: 2.4rem;
-	margin: 0 0 1rem 0;
+article {
+	padding: 0 1em;
+}
+
+article > header > h1, article > header > h2 {
+	font-size: 2.4em;
+	line-height: 1em;
+	margin: 0 0 .4em 0;
 }
 
 .entry-meta {
@@ -924,4 +929,5 @@ footer#colophon {
 	max-width: 1100px;
 	margin: 0 auto;
 	text-align: center;
+	padding: 0 1em;
 }
