@@ -859,12 +859,17 @@ header#masthead h1, header#masthead p {
 	margin: 0;
 }
 
-header#masthead > * > a {
+header#masthead a {
 	border-bottom: unset;
 }
 
 header#masthead > a {
 	font-weight: bold;
+}
+
+header#masthead > a > svg {
+	width: 1.8em;
+	height: 1.8em;
 }
 
 .logo {
@@ -879,7 +884,7 @@ header#masthead > a {
 	height: 2.4em;
 }
 
-.logo svg * {
+svg * {
 	width: 100%;
 	height: 100%;
 }

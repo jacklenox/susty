@@ -45,9 +45,22 @@
 			<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'hame' ); ?></a></p>
 			<?php
 		endif;
-		?>
 
+		if ( get_query_var( 'menu' ) ) :
+			if ( 0 === strpos( filter_input( INPUT_SERVER, 'HTTP_REFERER', FILTER_SANITIZE_URL ), home_url() ) ) {
+				$prev_url = filter_input( INPUT_SERVER, 'HTTP_REFERER', FILTER_SANITIZE_URL );
+			} else {
+				$prev_url = home_url( '/' );
+			}
+			?>
+			<a href="<?php echo esc_url( $prev_url ); ?>" rel="home"><?php echo file_get_contents( get_stylesheet_directory() . '/images/noun_1746502.svg' ); ?></a>
+			<?php
+		else :
+			?>
 			<a href="<?php echo esc_url( ( get_option( 'permalink_structure' ) ? home_url( '/menu/' ) : home_url( '/?menu' ) ) ); ?>">Menu</a>
+			<?php
+		endif;
+		?>
 	</header>
 
 	<div id="content">
