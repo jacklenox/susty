@@ -397,7 +397,7 @@ optgroup,
 textarea {
 	color: rgb(4, 4, 2);
 	font-family: "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "Nimbus Sans L", "Liberation Sans", Tahoma, Geneva, sans-serif;;
-	font-size: calc( 14px + 4 * (100vw / 1500));
+	font-size: calc( 15px + 4 * (100vw / 1500));
 	line-height: 1.5;
 }
 
