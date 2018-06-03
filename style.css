@@ -603,9 +603,7 @@ textarea {
 a {
 	color: rgb(4, 4, 2);
 	text-decoration: none;
-	border-bottom-width: 0.2em;
-	border-bottom-style: solid;
-	border-bottom-color: transparent;
+	border-bottom: 0.2em solid transparent;
 }
 
 a:visited {
@@ -614,6 +612,7 @@ a:visited {
 
 a:hover, a:focus, a:active {
 	/*color: midnightblue;*/
+	border-bottom-style: solid;
 	border-bottom-color: inherit;
 }
 
@@ -897,8 +896,9 @@ svg * {
 	padding: 0 1em;
 }
 
-article a {
+article a, nav a {
 	background: rgb(252, 248, 243) none repeat scroll 0% 0%;
+	border-bottom: 0.1em dotted;
 }
 
 article > header > h1, article > header > h2 {
