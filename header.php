@@ -29,7 +29,7 @@
 				the_custom_logo();
 			else :
 				?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo file_get_contents( get_stylesheet_directory() . '/images/eco-chat.svg' ); ?></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo file_get_contents( get_stylesheet_directory() . '/images/eco-chat.svg' ); ?><span class="screen-reader-text">Home</span></a>
 				<?php
 			endif;
 			?>
