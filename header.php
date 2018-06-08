@@ -48,7 +48,7 @@
 
 		if ( get_query_var( 'menu' ) ) :
 			?>
-			<a id="susty-back-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo file_get_contents( get_stylesheet_directory() . '/images/noun_1746502.svg' ); ?></a>
+			<a id="susty-back-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo file_get_contents( get_stylesheet_directory() . '/images/noun_1746502.svg' ); ?><span class="screen-reader-text"><?php esc_html_e( 'Close menu', 'susty' ); ?></span></a>
 			<script>
 				var susty_home_url = '<?php echo esc_url( home_url( '/' ) ); ?>';
 				if ( 0 === document.referrer.indexOf( susty_home_url ) ) {
