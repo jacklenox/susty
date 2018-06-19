@@ -606,7 +606,7 @@ a {
 }
 
 a#susty-back-link {
-	padding: .3em;
+	padding: .3em .6em;
 }
 
 a:visited {
