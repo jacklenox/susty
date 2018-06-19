@@ -599,9 +599,14 @@ textarea {
 # Links
 --------------------------------------------------------------*/
 a {
+	padding: .1em 0;
 	color: rgb(4, 4, 2);
 	text-decoration: none;
 	border-bottom: 0.2em solid transparent;
+}
+
+a#susty-back-link {
+	padding: .3em;
 }
 
 a:visited {
