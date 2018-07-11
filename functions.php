@@ -157,3 +157,11 @@ add_filter( 'template_include', function( $path ) {
 	}
 	return $path;
 });
+
+// Remove dashicons in frontend for unauthenticated users
+add_action( 'wp_enqueue_scripts', 'susty_dequeue_dashicons' );
+function susty_dequeue_dashicons() {
+	if ( ! is_user_logged_in() ) {
+		wp_deregister_style( 'dashicons' );
+	}
+}
