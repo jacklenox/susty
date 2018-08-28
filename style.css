@@ -901,6 +901,7 @@ svg * {
 article a, nav a {
 	background: rgb(252, 248, 243) none repeat scroll 0% 0%;
 	border-bottom: 0.1em dotted;
+	line-height: 1.6em;
 }
 
 article > header > h1, article > header > h2 {
