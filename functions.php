@@ -165,3 +165,8 @@ function susty_dequeue_dashicons() {
 		wp_deregister_style( 'dashicons' );
 	}
 }
+
+// Remove comment added by Yoast
+add_action('wp_head',function() { ob_start(function($o) {
+ return preg_replace('/^\n?<!--.*?[Y]oast.*?-->\n?$/mi','',$o);
+}); },~PHP_INT_MAX);
