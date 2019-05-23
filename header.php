@@ -29,7 +29,7 @@
 				the_custom_logo();
 			else :
 				?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/eco-chat.svg' ); ?>"><span class="screen-reader-text"><?php esc_html_e( 'Home', 'susty' ); ?></span></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img alt="Susty WP logo" src="<?php echo esc_url( get_template_directory_uri() . '/images/eco-chat.svg' ); ?>"><span class="screen-reader-text"><?php esc_html_e( 'Home', 'susty' ); ?></span></a>
 				<?php
 			endif;
 			?>
