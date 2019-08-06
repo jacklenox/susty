@@ -79,6 +79,13 @@ if ( ! function_exists( 'susty_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+		/**
+		 * Add support for Responsive embeds.
+		 *
+		 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#responsive-embedded-content
+		 */
+		add_theme_support( 'responsive-embeds' );
 	}
 endif;
 add_action( 'after_setup_theme', 'susty_setup' );
